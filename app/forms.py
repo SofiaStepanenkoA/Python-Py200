@@ -3,6 +3,8 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 # TODO создайте здесь все необходимые формы
 
 
+
+
 class TemplateForm(forms.Form):
     my_text = forms.CharField()
     # choices в ChoiceField нужен только для отображения в HTML форме
@@ -32,6 +34,7 @@ class CustomUserCreationForm(UserCreationForm):
             if hasattr(self, "save_m2m"):
                 self.save_m2m()
         return user
+
 
 """
 Типы полей и их аналоги задаваемые в формах HTML
